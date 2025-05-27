@@ -1,7 +1,5 @@
 - [スカラービーム](#スカラービーム)
 - [楕円率](#楕円率)
-- [射影演算子](#射影演算子)
-- [スカラービームの表現](#スカラービームの表現)
 - [パウリ行列展開](#パウリ行列展開)
 - [ストークスパラメーター](#ストークスパラメーター)
 - [ポアンカレ球](#ポアンカレ球)
@@ -65,6 +63,7 @@ $$
 \Bigl(\frac{E _ {x}}{E _ {x0}}\Bigr)^2+\Bigl(\frac{E _ {y}}{E _ {y0}}\Bigr)^2-2\frac{E _ {x}E _ y}{E _ {x0}E _ {y0}} \cos{\varepsilon}=\sin^2{\varepsilon}
 $$
 
+<!--
 ## 射影演算子
 
 今までの説明では偏光を表すときにジョーンズベクトルの各成分の振幅比と位相差のみが重要と言ってきました.つまりジョーンズベクトルが
@@ -205,9 +204,13 @@ P
 \end{aligned}
 $$
 
+--> 
+
+<!--
+
 ## スカラービームの表現
 
-任意のスカラービームは２つの直交基底ベクトルの重ね合わせで表現できる
+任意のスカラービームは２つの直交基底ベクトル(直交する偏光状態を表すベクトル)の重ね合わせで表現できます.
 
 ジョーンズベクトルを
 
@@ -234,6 +237,11 @@ S _ 3
 \end{bmatrix}
 $$
 
+のように表されます.
+
+-->
+
+<!--
 例えばジョーンズベクトルが
 
 $$
@@ -357,6 +365,8 @@ e^{i\varphi}\sin{\Bigl (\theta+\frac{\pi}{4}\Bigr )}
 -i
 \end{bmatrix}
 $$
+
+-->
 
 ## パウリ行列展開
 
@@ -957,74 +967,3 @@ S _ 3
 $$
 
 と計算できます.先ほどの1/2波長板と違って自分はどのようなパターンで変化させているか(自分は)イメージがつかめません.
-
-### 直線偏光子
-
-同様に考えます.
-
-$$
-\begin{aligned}
-\begin{bmatrix}
-\alpha' \newline
-\beta'
-\end{bmatrix}
-&=
-\begin{bmatrix}
-\cos^2{\theta} & \sin{\theta}\cos{\theta} \newline
-\sin{\theta} & \sin^2{\theta}
-\end{bmatrix}
-\begin{bmatrix}
-\alpha \newline
-\beta
-\end{bmatrix} \newline
-&=
-\begin{bmatrix}
-\alpha \cos^2{\theta}+\beta \sin{\theta} \cos{\theta} \newline
-\alpha \sin{\theta} \cos{\theta} & \beta \sin^2{\theta}
-\end{bmatrix} \newline
-\therefore
-\begin{bmatrix}
-\alpha' \newline
-\beta'
-\end{bmatrix}
-&=
-\begin{bmatrix}
-\alpha _ 1 \cos^2{\theta}+\beta _ 1 \sin{\theta} \cos{\theta}+i(\alpha _ 2 \cos^2{\theta}+\beta _ 2\sin{\theta} \cos{\theta}) \newline
-\alpha _ 1 \sin{\theta} \cos{\theta}+\beta _ 1 \sin^2{\theta}+i(\alpha _ 2 \sin{\theta} \cos{\theta}+\beta _ 2\sin^2{\theta})
-\end{bmatrix}
-\end{aligned}
-$$
-
-であるので
-
-$$
-\begin{aligned}
-\vert \alpha' \vert^2
-&=
-\alpha^2 _ 1\cos^4{\theta}+2\alpha _ 1 \beta _ 1\sin{\theta} \cos^3{\theta}+\beta^2 _ 1\sin^2{\theta} \cos^2{\theta}+\alpha _ 2 \cos^4{\theta}+2\alpha^2 _ 2 \beta _ 2 \sin{\theta} \cos^3{\theta}+\beta^2 _ 2\sin^2{\theta} \cos^2{\theta} \newline
-\therefore
-\vert \alpha' \vert^2
-&=
-\vert \alpha \vert^2 \cos^4{\theta}+\vert \beta \vert^2 \sin^2{\theta} \cos^2{\theta}+2(\alpha _ 1 \beta _ 1+\alpha _ 2\beta _ 2)\sin{\theta}\cos^3{\theta}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\vert \beta' \vert^2
-&=
-\alpha^2 _ 1\sin^2{\theta} \cos^2{\theta}+2\alpha _ 1 \beta _ 1\sin^3{\theta} \cos{\theta}+\beta^2 _ 1\sin^4{\theta}+\alpha^2 _ 2 \sin^2{\theta} \cos^2{\theta}+2\alpha _ 2 \beta _ 2 \sin^3{\theta} \cos{\theta}+\beta^2 _ 2\sin^4{\theta} \newline
-\therefore
-\vert \beta' \vert^2
-&=
-\vert \alpha \vert^2 \sin^2{\theta} \cos^2{\theta}+\vert \beta \vert^2 \sin^4{\theta}+2(\alpha _ 1 \beta _ 1+\alpha _ 2\beta _ 2)\sin^3{\theta}\cos{\theta}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\alpha \beta^\ast
-&=
-\alpha _ 1 \cos^2{\theta}+\beta _ 1 \sin{\theta} \cos{\theta}+i(\alpha _ 2 \cos^2{\theta}+\beta _ 2\sin{\theta} \cos{\theta}) \times \bigl(\alpha _ 1 \sin{\theta} \cos{\theta}+\beta _ 1 \sin^2{\theta}-i(\alpha _ 2 \sin{\theta} \cos{\theta}+\beta _ 2\sin^2{\theta})\bigr)
-\end{aligned}
-$$
